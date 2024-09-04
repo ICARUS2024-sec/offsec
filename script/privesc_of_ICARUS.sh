@@ -104,7 +104,7 @@ do
 
                  echo -e "\u001b[34mHistory...\u001b[0m"
                  sleep 1
-                 history 2>7dev/null 
+                 history  
 
                  echo -e "\033[31m------------------------------\033[0m"
                  
