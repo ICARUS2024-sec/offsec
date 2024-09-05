@@ -17,7 +17,7 @@ do
                         echo "$HOSTNAME";;
 
                     "Kernel Information" )
-                        uname -a & cat /proc/version;;
+                        uname -a ; cat /proc/version;;
 
                     "Distribution Information" )
                         cat /etc/issue;;
