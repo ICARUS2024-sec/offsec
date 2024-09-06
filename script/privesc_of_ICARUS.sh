@@ -7,7 +7,7 @@ select option in "Manual" "Auto"; do
     case $option in
         "Manual" )
             PS3="Select an option: "
-            select sub_option in "Hostname" "Kernel Information" "Distribution Information" "Running Processes" "Environment Variables" "Sudo Version" "Sudo List" "Passwd File" "Network Information" "Listening Ports" "Suid Files" "Export Files" "Capabilities"; do
+            select sub_option in "Hostname" "Kernel Information" "Distribution Information" "Running Processes" "Environment Variables" "Sudo Version" "Sudo List" "Passwd File" "Network Information" "Listening Ports" "Suid Files" "Export Files" "Capabilities" "Find id_rsa files"; do
                 case $sub_option in
                     "Hostname" ) echo "$HOSTNAME";;
                     "Kernel Information" ) uname -a; cat /proc/version;;
@@ -22,6 +22,7 @@ select option in "Manual" "Auto"; do
                     "Suid Files" ) find / -perm -u=s -type f 2>/dev/null;;
                     "Export Files" ) cat /etc/exports 2>/dev/null;;
                     "Capabilities" ) getcap -r / 2>/dev/null;;
+                    "Find id_rsa files" ) ls -la ~/.ssh 2>/dev/null;;
                     * ) echo "Invalid option";;
                 esac
             done
@@ -46,6 +47,7 @@ select option in "Manual" "Auto"; do
                     "SUID Files: find / -perm -u=s -type f 2>/dev/null"
                     "Export Files: cat /etc/exports 2>/dev/null"
                     "Capabilities: getcap -r / 2>/dev/null"
+                    "Find id_rsa files: ls -la ~/.ssh 2>/dev/null"
                 )
                 
                 for item in "${info[@]}"; do
