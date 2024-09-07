@@ -1,7 +1,7 @@
 # ICARUS's_privilege_escalation.sh</br>
 ## What is the purpose of this project?
 
-This script performs enumeration to privilege escalation stage in infiltrated systems.
+This script performs enumeration to privilege escalation stage in infiltrated systems.</br></br></br>
 ![Image](https://i.hizliresim.com/e5do921.png)</br></br></br>
 ![Image](https://i.hizliresim.com/b80ky4v.png)</br></br></br>
 ![Image](https://i.hizliresim.com/hkmvbgk.png)</br></br></br>
