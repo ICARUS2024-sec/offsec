@@ -22,7 +22,7 @@ select option in "Manual" "Auto"; do
                     "Suid Files" ) find / -perm -u=s -type f 2>/dev/null;;
                     "Export Files" ) cat /etc/exports 2>/dev/null;;
                     "Capabilities" ) getcap -r / 2>/dev/null;;
-                    "Find id_rsa files" ) ls -la ~/.ssh 2>/dev/null;;
+                    "Find id_rsa files" ) find / -name id_rsa 2>/dev/null;;
                     * ) echo "Invalid option";;
                 esac
             done
@@ -47,7 +47,7 @@ select option in "Manual" "Auto"; do
                     "SUID Files: find / -perm -u=s -type f 2>/dev/null"
                     "Export Files: cat /etc/exports 2>/dev/null"
                     "Capabilities: getcap -r / 2>/dev/null"
-                    "Find id_rsa files: ls -la ~/.ssh 2>/dev/null"
+                    "Find id_rsa files: find / -name id_rsa 2>/dev/null"
                 )
                 
                 for item in "${info[@]}"; do
