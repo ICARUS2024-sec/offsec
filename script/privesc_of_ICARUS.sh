@@ -49,7 +49,7 @@ select option in "Manual" "Auto"; do
                     "Capabilities: getcap -r / 2>/dev/null"
                     "Find id_rsa files: find / -name id_rsa 2>/dev/null"
                     "Does the user have permission to write to her own directory?: [ -w '/home/$USER' ] && echo 'You have permission to write to your own directory' || echo 'You do not have permission to write to your own directory'"
-                    
+                    "SGID Files: find / -perm -g=s -type f 2>/dev/null"
                 )
                 
                 for item in "${info[@]}"; do
